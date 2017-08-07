@@ -36,6 +36,7 @@
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="48m-9c-w9k"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="faP-Zk-V3a"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -50,11 +51,48 @@
                     <navigationItem key="navigationItem" id="Geo-Ky-Uwh"/>
                     <connections>
                         <outlet property="table" destination="yxN-PP-8vk" id="Qvv-QB-63F"/>
+                        <segue destination="E94-R0-weu" kind="show" identifier="detail" id="zVX-fw-MR5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="860" y="138.98050974512745"/>
+        </scene>
+        <!--Note-->
+        <scene sceneID="PFd-R6-tPf">
+            <objects>
+                <viewController title="Note" id="E94-R0-weu" customClass="DetailViewController" customModule="todo_list_swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kbz-56-fiA"/>
+                        <viewControllerLayoutGuide type="bottom" id="Tld-Ix-yJb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="P2K-DX-RZP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="eBb-vL-pqt">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eBb-vL-pqt" firstAttribute="leading" secondItem="P2K-DX-RZP" secondAttribute="leading" id="4Kj-T6-ajd"/>
+                            <constraint firstAttribute="trailing" secondItem="eBb-vL-pqt" secondAttribute="trailing" id="LAX-o3-7TF"/>
+                            <constraint firstItem="eBb-vL-pqt" firstAttribute="bottom" secondItem="Tld-Ix-yJb" secondAttribute="top" id="k2g-vg-ACJ"/>
+                            <constraint firstItem="eBb-vL-pqt" firstAttribute="top" secondItem="P2K-DX-RZP" secondAttribute="top" id="wXC-KE-i8w"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="eBb-vL-pqt" id="IE1-Av-ywZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gWb-98-XY0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1672.8" y="138.98050974512745"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wIB-aG-Jwr">
